@@ -169,7 +169,8 @@ conda init "$(basename "${SHELL}")"
 # new terminal windows start here: ~/dev
 [[ "$PWD" == $HOME ]] && cd ~/dev
 
-
+# for siging commits with gpg
+export GPG_TTY=$(tty)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
