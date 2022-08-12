@@ -1,6 +1,5 @@
 Inspired by https://github.com/driesvints/dotfiles
 
-
 GPG siging working with this version of Gitx: https://github.com/gitx/gitx/pull/326
 
 GPG signing Setup:
