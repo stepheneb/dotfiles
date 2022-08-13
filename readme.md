@@ -25,3 +25,4 @@ Add new GPG public key to GitHub account settings:
 Add `export GPG_TTY=$(tty)` to ~/.zshrc`.
 
 Add `no-tty` to `~/.gnupg/gpg.conf`.
+
