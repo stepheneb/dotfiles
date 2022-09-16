@@ -28,3 +28,14 @@ function node-project {
   git commit -m "Initial commit"
 }
 
+function dotfiles {
+  cd ~/.dotfiles
+}
+
+function reloadz {
+  source ~/.zshrc
+}
+
+function sysinfo {
+  system_profiler SPSoftwareDataType SPHardwareDataType -detailLevel mini
+}
