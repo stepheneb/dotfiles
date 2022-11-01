@@ -4,6 +4,8 @@ export DOTFILES=$HOME/.dotfiles
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+typeset -U path PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -151,7 +153,7 @@ precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 # RPROMPT='${vcs_info_msg_0_}'
 
-PROMPT='%1~ $(rbenv version-name) ${vcs_info_msg_0_} %# '
+PROMPT='%1~ ruby-$(rbenv version-name) ${vcs_info_msg_0_} %# '
 zstyle ':vcs_info:git:*' formats '%b'
 
 source $DOTFILES/exports.zsh
@@ -164,13 +166,13 @@ for file in $DOTFILES/private/*.*sh; do
     source "$file"
 done
 
-conda init "$(basename "${SHELL}")"
-
 # new terminal windows start here: ~/dev
 [[ "$PWD" == $HOME ]] && cd ~/dev
 
 # for siging commits with gpg
 export GPG_TTY=$(tty)
+
+conda init "$(basename "${SHELL}")"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -186,5 +188,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+conda deactivate
+
+path=("$HOME/dev/bin" $path)
 
 # test gpg
