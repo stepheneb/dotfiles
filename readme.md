@@ -26,6 +26,8 @@ Add `export GPG_TTY=$(tty)` to ~/.zshrc`.
 
 Add `no-tty` to `~/.gnupg/gpg.conf`.
 
+https://github.com/jorgelbg/pinentry-touchid
+
 
 ___
 
