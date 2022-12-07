@@ -146,6 +146,10 @@ eval "$(rbenv init - zsh)"
 # source ~/.rbenv/completions/rbenv.zsh
 
 # https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Zsh
+
+# https://docs.brew.sh/Shell-Completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 autoload -Uz compinit && compinit
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -194,3 +198,4 @@ conda deactivate
 path=("$HOME/dev/bin" $path)
 
 # test gpg
+
