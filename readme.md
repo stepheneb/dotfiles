@@ -28,7 +28,11 @@ Add `no-tty` to `~/.gnupg/gpg.conf`.
 
 https://github.com/jorgelbg/pinentry-touchid
 
+test:
 
+```
+% touch a.txt
+% gpg --sign a.txt
 ___
 
 % locate file.mp4
