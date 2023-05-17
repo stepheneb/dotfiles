@@ -161,11 +161,10 @@ PROMPT='%1~ ruby-$(rbenv version-name) ${vcs_info_msg_0_} %# '
 zstyle ':vcs_info:git:*' formats '%b'
 
 source $DOTFILES/exports.zsh
-
 source $DOTFILES/aliases.zsh
-
 source $DOTFILES/functions.zsh
 
+# load private files
 for file in $DOTFILES/private/*.*sh; do
     source "$file"
 done
