@@ -39,3 +39,17 @@ function reloadz {
 function sysinfo {
   system_profiler SPSoftwareDataType SPHardwareDataType -detailLevel mini
 }
+
+function add_bin_to_path {
+  export PATH="$(pwd)/bin:$PATH"
+}
+
+# creates a new terminal window
+function newt() {
+  if [[ $# -eq 1 ]]; then
+    open -a "Terminal" "$1"
+  fi
+  if [[ $# -eq 0 ]]; then
+    open -a "Terminal" "$PWD"
+  fi
+}
