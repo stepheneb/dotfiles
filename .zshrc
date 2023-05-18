@@ -164,6 +164,8 @@ source $DOTFILES/exports.zsh
 source $DOTFILES/aliases.zsh
 source $DOTFILES/functions.zsh
 
+source $DOTFILES/external/zhooks/zhooks.plugin.zsh
+
 # load private files
 for file in $DOTFILES/private/*.*sh; do
     source "$file"

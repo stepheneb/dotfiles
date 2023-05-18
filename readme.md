@@ -44,3 +44,30 @@ To create the database, run the following command:
 
 Please be aware that the database can take some time to generate; once
 the database has been created, this message will no longer appear.
+
+Adding https://github.com/agkozak/zhooks as a subtree in ./external
+
+```
+mkdir external
+git subtree add --prefix external/zhooks git@github.com:agkozak/zhooks.git master --squash
+```
+
+Example:
+
+```
+% zhooks
+chpwd_functions:
+load-nvmrc
+
+precmd_functions:
+update_terminal_cwd
+omz_termsupport_precmd
+omz_termsupport_cwd
+precmd_vcs_info
+
+preexec_functions:
+omz_termsupport_preexec
+
+zshexit_functions:
+shell_session_update
+```
