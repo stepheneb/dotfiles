@@ -71,3 +71,26 @@ omz_termsupport_preexec
 zshexit_functions:
 shell_session_update
 ```
+
+**brew-cask-upgrade**
+
+brew-cask-upgrade is a command-line tool for upgrading every outdated app installed by Homebrew Cask.
+
+https://github.com/buo/homebrew-cask-upgrade
+
+```
+% brew tap
+buo/cask-upgrade
+```
+
+Upgrade outdated apps:
+
+```
+brew cu
+```
+
+Upgrade a specific app:
+
+```
+brew cu [CASK]
+```

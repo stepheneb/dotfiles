@@ -11,3 +11,5 @@ alias chrome="open -b com.google.Chrome.canary --args --disable-application-cach
 alias brew-dump="brew bundle dump --force --file=$DOTFILES/Brewfile"
 
 alias brew-upgrade-casks="brew upgrade $(brew outdated --cask --greedy --quiet)"
+
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
