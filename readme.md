@@ -2,37 +2,31 @@ Inspired by https://github.com/driesvints/dotfiles
 
 GPG siging working with this version of Gitx: https://github.com/gitx/gitx/pull/326
 
-GPG signing Setup:
+GPG signing Setup: see: gpg/siging-commits.md
 
-Install gpg-suite without mail tools.
-
-```sh
-brew install --cask gpg-suite-no-mail
-```
-
-Export gpg public key in a text format.
 
 ```sh
-% gpg --armor --output stephen.gpg --export stephen.bannasch@gmail.com
+brew install gpg2 gnupg pinentry-mac
 ```
+
+Export gpg public key in a text format file: stephen.gpg, to use for GitHub
+
+```sh
+gpg --armor --output stephen.gpg --export stephen.bannasch@gmail.com
+```
+
+test gpg sigging:
+
+```sh
+touch a.txt
+gpg --sign a.txt
 
 Add new GPG public key to GitHub account settings:
 
 ```sh
-% open https://github.com/settings/keys
+open https://github.com/settings/keys
 ```
 
-Add `export GPG_TTY=$(tty)` to ~/.zshrc`.
-
-Add `no-tty` to `~/.gnupg/gpg.conf`.
-
-https://github.com/jorgelbg/pinentry-touchid
-
-test:
-
-```
-% touch a.txt
-% gpg --sign a.txt
 ___
 
 % locate file.mp4
