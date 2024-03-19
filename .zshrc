@@ -198,5 +198,9 @@ conda deactivate
 
 path=("$HOME/dev/bin" $path)
 
+# https://www.jenv.be/ manage JAVA_HOME
+path=("$HOME/.jenv/bin" $path)
+eval "$(jenv init -)"
+
 # test gpg
 
